@@ -415,178 +415,27 @@ article h3 {
 
 /* --- Target Selectors --- */
 
-article:target {
-  background: #f0f0f0;
-}
-
 /* --- Pseudo Classes --- */
 
 /* Table */
 
-th:first-child {
-  -webkit-border-top-left-radius: 5px;
-      -moz-border-radius-topleft: 5px;
-          border-top-left-radius: 5px;
-}
-
-th:last-child {
-  -webkit-border-top-right-radius: 5px;
-      -moz-border-radius-topright: 5px;
-          border-top-right-radius: 5px;
-}
-
-th, td {
-  border-bottom: none;
-}
-
-tr:nth-child(even) {
-  background: #f0f0f0;
-}
-
-td {
-  border-right: 1px solid #f0f0f0;
-}
-
-tr:nth-child(even) td {
-  border-right: 1px solid #fff;
-}
-
-td:last-child {
-  border-right: 0;
-}
-
 /* Drop Caps */
-
-p:first-of-type:first-letter {
-  font-size: 3em;
-  font-weight: bold;
-  float: left;
-  line-height: 0.8em;
-}
 
 /* --- Pseudo Elements --- */
 
 /* Article Dividers */
 
-article {
-  border-top: 0;
-  padding-top: 0;
-  margin-top: 0;
-}
-
-article:after {
-  content: url(../img/divider.png);
-  display: block;
-  margin: 3em auto 1em;
-  text-align: center;
-}
-
-article:first-child {
-  border-top: 1px solid #999;
-  padding-top: 2em;
-}
-
 /* Arrow Links */
-
-.arrow {
-  position: relative;
-}
-
-.arrow:before,
-.arrow:after {
-  content: '';
-  width: 0;
-  height: 0;
-  padding: 0;
-  border: 1em solid transparent;
-  position: absolute;
-  top: 0;
-}
-
-.arrow:before {
-  border-left: 1em solid #fff;
-  left: 0;
-}
-
-.arrow:after {
-  border: 1em solid #fff;
-  border-left: 1em solid transparent;
-  right: -1em;
-}
-
-article:target .arrow:before {
-  border-left: 1em solid #f0f0f0;
-}
-
-article:target .arrow:after {
-  border: 1em solid #f0f0f0;
-  border-left: 1em solid transparent;
-}
 
 /* --- Sibling Selectors --- */
 
 /* Paragraph Styling */
 
-p {
-  margin: 0 0 0.1em;
-  font-size: 1.6em;
-}
-
-p + p {
-  margin: 0;
-  font-size: 1.4em;
-  text-indent: 2.5em;
-}
-
 /* --- Attribute Selectors --- */
 
 /* New window links */
 
-a[target] {
-  padding-right: 14px;
-  background: url(../img/sprite.png) right -150px no-repeat;
-}
-
 /* Social Links */
-
-.social a:before {
-  width: 16px;
-  height: 16px;
-  background-image: url(../img/sprite.png);
-  background-repeat: no-repeat;
-  content: '';
-  display: inline-block;
-  margin-right: 5px;
-  position: relative;
-  top: 3px;
-}
-
-.social a[href*='twitter']:before {
-  background-position: 0 -20px;
-}
-
-.social a[href*='facebook']:before {
-  background-position: 0 -40px;
-}
-
-.social a[href*='youtube']:before {
-  background-position: 0 -60px;
-}
-
-.social a[href*='wiki']:before {
-  background-position: 0 -80px;
-}
 
 /* Forms */
 
-input[type='email'] {
-  background-image: url(../img/sprite.png);
-  background-repeat: no-repeat;
-  background-position: 98% -100px;
-}
-
-input[name='your_name'] {
-  background-image: url(../img/sprite.png);
-  background-repeat: no-repeat;
-  background-position: 98% -123px;
-}
