@@ -632,3 +632,8 @@ input[name='your_name'] {
 .cast p {
   font-size: 11px;
 }
+
+.no-borderradius .cast img {
+  padding: 3px;
+  border: 1px solid #ccc;
+}
