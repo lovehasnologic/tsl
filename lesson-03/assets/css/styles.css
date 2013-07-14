@@ -614,6 +614,7 @@ input[name='your_name'] {
 
 .cast img {
   max-width: 100%;
+  width: auto;
   height: auto !important;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
