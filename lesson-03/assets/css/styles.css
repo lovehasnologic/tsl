@@ -9,7 +9,8 @@
  * 05. Forms
  * 06. Tables
  * 07. Articles
- * 08. Lesson Additions
+ * 08. Complex Selectors
+ * 09. Cast
  *
  * ------------------------------------------ */
 
@@ -116,7 +117,7 @@ body {
   background: #fff;
 }
 
-img {
+.main img {
   padding: 3px;
   border: 1px solid #eee;
 }
@@ -376,12 +377,12 @@ td {
  * Articles
  * ------------------------------------------- */
 
-article {
+.main article {
   padding: 2em 1em 1em;
   border-top: 1px solid #4a4a4a;
 }
 
-article h3 {
+.main article h3 {
   margin-top: 0;
 }
 
@@ -410,12 +411,12 @@ article h3 {
 
 
 /* ------------------------------------------
- * Lesson Additions
+ * Complex Selectors
  * ------------------------------------------ */
 
 /* --- Target Selectors --- */
 
-article:target {
+.main article:target {
   background: #f0f0f0;
 }
 
@@ -457,7 +458,7 @@ td:last-child {
 
 /* Drop Caps */
 
-p:first-of-type:first-letter {
+.main p:first-of-type:first-letter {
   font-size: 3em;
   font-weight: bold;
   float: left;
@@ -468,20 +469,20 @@ p:first-of-type:first-letter {
 
 /* Article Dividers */
 
-article {
+.main article {
   border-top: 0;
   padding-top: 0;
   margin-top: 0;
 }
 
-article:after {
+.main article:after {
   content: url(../img/divider.png);
   display: block;
   margin: 3em auto 1em;
   text-align: center;
 }
 
-article:first-child {
+.main article:first-child {
   border-top: 1px solid #999;
   padding-top: 2em;
 }
@@ -514,11 +515,11 @@ article:first-child {
   right: -1em;
 }
 
-article:target .arrow:before {
+.main article:target .arrow:before {
   border-left: 1em solid #f0f0f0;
 }
 
-article:target .arrow:after {
+.main article:target .arrow:after {
   border: 1em solid #f0f0f0;
   border-left: 1em solid transparent;
 }
@@ -527,12 +528,12 @@ article:target .arrow:after {
 
 /* Paragraph Styling */
 
-p {
+.main p {
   margin: 0 0 0.1em;
   font-size: 1.6em;
 }
 
-p + p {
+.main p + p {
   margin: 0;
   font-size: 1.4em;
   text-indent: 2.5em;
@@ -589,4 +590,44 @@ input[name='your_name'] {
   background-image: url(../img/sprite.png);
   background-repeat: no-repeat;
   background-position: 98% -123px;
+}
+
+
+
+
+
+/* ------------------------------------------
+ * Cast
+ * ------------------------------------------ */
+
+.cast article {
+  width: 14.166666667%;
+  margin-left: 3%;
+  float: left;
+  display: inline;
+  text-align: center;
+}
+
+.cast article:first-child {
+  margin-left: 0;
+}
+
+.cast img {
+  max-width: 100%;
+  height: auto !important;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.cast figcaption {
+  margin: 0.75em 0 0.25em;
+  font-weight: 700;
+  font-family: 'Oswald', 'Helvetica Neue', Helmet, Freesans, sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.cast p {
+  font-size: 11px;
 }
