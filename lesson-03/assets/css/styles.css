@@ -440,7 +440,7 @@ th, td {
 }
 
 tr:nth-child(even) {
-  background: #f0f0f0;
+  background: #ccc;
 }
 
 td {
