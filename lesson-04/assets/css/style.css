@@ -263,7 +263,7 @@ section {
 
 .hero {
   background: #000 url(../img/hero-bg.jpg) 50% 50% no-repeat;
-  padding: 15em 0;
+  padding: 15em 0 10em;
   text-align: center;
 }
 
