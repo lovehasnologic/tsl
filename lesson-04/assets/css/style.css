@@ -263,7 +263,7 @@ section {
 
 .hero {
   background: #000 url(../img/hero-bg.jpg) 50% 50% no-repeat;
-  padding: 15em 0;
+  padding: 15em 0 10em;
   text-align: center;
 }
 
@@ -366,8 +366,90 @@ section {
  * ------------------------------------------ */
 
 /* ----- RGBa & Opacity (Nav & Buttons) ----- */
+
+.opacity nav a {
+  color: #000;
+  opacity: 0.25;
+}
+
+.opacity nav a:hover {
+  opacity: 0.65;
+}
+
+.rgba .what .button-more:hover,
+.rgba .join .button-more:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.rgba .experts .button-more:hover,
+.rgba .people .button-more:hover {
+  background: rgba(0,145,213,0.25);
+}
+
 /* ----- Multi-Text Columns (Join Section) ----- */
+
+.csscolumns .columns {
+  text-align: left;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 50px;
+  margin-bottom: 3em;
+  line-height: 1.4;
+}
+
+.csscolumns .columns h5 {
+  text-align: right;
+}
+
+.csscolumns .columns p {
+  text-align: justify;
+}
+
 /* ----- Multiple Backgrounds (What & Join Sections) ----- */
+
+.what,
+.join {
+  background-image: url(../img/pattern.png);
+}
+
+.what {
+  padding-bottom: 7em;
+  background-image: url(../img/spikes.png), url(../img/pattern.png);
+  background-position: 50% bottom, 50% top;
+  background-repeat: repeat-x, repeat;
+}
+
+.hero {
+  background-size: cover;
+}
+
+
 /* ----- Text-Shadows (Headlines) ----- */
+
+.hero h1 {
+  text-shadow: 0 0 20px rgba(0,0,0,1);
+}
+
+.what h2,
+.join h2 {
+  text-shadow: 0 1px 0 rgba(255,255,255,0.35), 0 -1px 0 rgba(0,0,0,0.75);
+}
+
 /* ----- Border Radius (Buttons and Images) ----- */
+
+.button-more {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+img {
+  border-radius: 50%;
+}
+
 /* ----- Box Shadow (Header) ----- */
+
+header {
+  -webkit-box-shadow: 0 0 7px rgba(0,0,0,0.65);
+  -moz-box-shadow: 0 0 7px rgba(0,0,0,0.65);
+  box-shadow: 0 0 7px rgba(0,0,0,0.65);
+}
