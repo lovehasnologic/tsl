@@ -1,0 +1,379 @@
+/* ------------------------------------------
+ *
+ * TABLE OF CONTENTS
+ *
+ * 01. Reset
+ * 02. Base Styles
+ * 03. Meters
+ * 04. Form
+ * 05. Alert
+ * 06. In Class Lesson
+ *
+ * ------------------------------------------ */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font: inherit;
+  font-size: 100%;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+strong em, em strong {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.group:before,
+.group:after {
+    display: table;
+    content: "";
+}
+.group:after {
+    clear: both;
+}
+.group {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+
+
+
+
+/* ***** Base Styles *** */
+
+body {
+  background: black url(../img/tweed.png);
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 2.5% 0;
+  width: 95%;
+}
+
+h1 {
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+
+
+
+
+/* ***** Meters *** */
+
+.meter {
+  margin: 1em 0;
+  height: 30px;
+  border: 2px solid #fff;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  background: #fff;
+      -ms-border-radius: 4px;
+       -o-border-radius: 4px;
+}
+
+.meter-50,
+.meter-100 {
+  height: 30px;
+}
+
+.meter-50 {
+  width: 50%;
+  background: red;
+}
+
+.meter-100 {
+  width: 100%;
+  background: green;
+}
+
+
+
+
+
+/* ***** Form *** */
+
+form {
+  position: relative;
+  overflow: hidden;
+  margin: 2em auto;
+  padding: 30px;
+  max-width: 400px;
+  border: 4px solid #222;
+  border: 4px solid rgba(0,0,0,0.5);
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  background: #222;
+  background: rgba(0,0,0,0.5);
+          background-clip: padding;
+      -ms-border-radius: 4px;
+       -o-border-radius: 4px;
+  -webkit-background-clip: padding;
+     -moz-background-clip: padding;
+      -ms-background-clip: padding;
+       -o-background-clip: padding;
+}
+
+label {
+  display: block;
+  margin: 1em 0 0.5em;
+  font-weight: bold;
+}
+
+label:first-child {
+  margin-top: 0;
+}
+
+input[type='text'],
+input[type='email'] {
+  width: 100%;
+}
+
+input[type='submit'] {
+  margin: 1.5em 0 0;
+  padding: 0.25em 1em;
+  width: 100%;
+  border: 0;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  background: #ddd;
+  font-weight: bold;
+  font-size: 1.25em;
+  font-family: Helvetica, Arial, sans-serif;
+  cursor: pointer;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+}
+
+input[type='submit']:hover {
+  background: maroon;
+  color: white;
+}
+
+
+
+
+
+/* ***** Alert *** */
+
+.alert {
+  display: none;
+  margin: 1.5em -30px -30px;
+  padding: 15px 30px;
+  background: maroon;
+  color: yellow;
+}
+
+.alert.no-dice {
+  display: block;
+}
+
+.alert h5 {
+  font-weight: bold;
+}
+
+.alert p {
+  color: #fff;
+}
+
+
+
+
+
+/* ***** In-Class Lesson *** */
+
+input[type='submit'] {
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+@-webkit-keyframes thermometer {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@-moz-keyframes thermometer {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@-o-keyframes thermometer {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@keyframes thermometer {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+.meter {
+  overflow: hidden;
+}
+
+.meter-50,
+.meter-100 {
+  -webkit-animation-name: thermometer;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-name: thermometer;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-iteration-count: 1;
+  -o-animation-name: thermometer;
+  -o-animation-timing-function: ease-in-out;
+  -o-animation-iteration-count: 1;
+  animation-name: thermometer;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+.meter-50 {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.meter-100 {
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes alert {
+  0%, 100% {
+    top: -200px;
+  }
+  10%, 90% {
+    top: 0;
+  }
+}
+
+@-moz-keyframes alert {
+  0%, 100% {
+    top: -200px;
+  }
+  10%, 90% {
+    top: 0;
+  }
+}
+
+@-o-keyframes alert {
+  0%, 100% {
+    top: -200px;
+  }
+  10%, 90% {
+    top: 0;
+  }
+}
+
+@keyframes alert {
+  0%, 100% {
+    top: -200px;
+  }
+  10%, 90% {
+    top: 0;
+  }
+}
+
+.cssanimations form {
+  position: static;
+}
+
+.cssanimations .alert.no-dice {
+  position: absolute;
+  top: -200px;
+  left: 0;
+  right: 0;
+  margin: 0;
+  -webkit-animation-name: alert;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-direction: forwards;
+  -moz-animation-name: alert;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-duration: 2s;
+  -moz-animation-direction: forwards;
+  -o-animation-name: alert;
+  -o-animation-timing-function: ease-in-out;
+  -o-animation-duration: 2s;
+  -o-animation-direction: forwards;
+  animation-name: alert;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-direction: forwards;
+}
