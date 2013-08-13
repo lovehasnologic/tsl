@@ -1,0 +1,126 @@
+/* Font face */
+@font-face {
+  /*
+   * Font: http://www.dafont.com/dj-horses-1.font
+   * Generator: http://www.fontsquirrel.com/tools/webfont-generator
+   */
+  font-family: 'Horse';
+  src: url('../fonts/horses-webfont.eot');
+  src: url('../fonts/horses-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/horses-webfont.woff') format('woff'),
+       url('../fonts/horses-webfont.ttf') format('truetype'),
+       url('../fonts/horses-webfont.svg#dj_horses_1regular') format('svg');
+}
+
+/* Base */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-image: linear-gradient(#ffe, white);
+}
+
+h1 {
+  font-family: "Sancreek", cursive;
+  font-size: 64px;
+  margin-bottom: 40px;
+  color: red;
+  text-shadow: -5px 5px 0px orange,
+               -10px 10px 0px yellow,
+               -15px 15px 0px blue,
+               -20px 20px 0px purple;
+}
+
+/* Layout */
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.btn {
+  position: relative;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 95px;
+  text-decoration: none;
+  text-shadow: 0 -1px 3px #333;
+  color: white;
+  background: #f00;
+  background: linear-gradient(#f00, #f00 50%, #900);
+  border-radius: 100%;
+  box-shadow: 0 3px 9px rgba(0,0,0,.5);
+}
+
+.btn:hover {
+  background: #c00;
+  background: linear-gradient(#f00, #f00 50%, #600);
+}
+
+.btn:active {
+  top: 1px;
+}
+
+/* Race Track */
+.race-track {}
+
+  .race-track li {
+    position: relative;
+    background: green;
+    font-family: "Sancreek", cursive;
+    font-size: 36px;
+    text-align: right;
+    padding: 20px 40px 20px 20px;
+    color: white;
+    color: rgba(255, 255, 255, .5);
+    text-shadow: 0 -1px 2px #060;
+    box-shadow: 0 -3px 9px rgba(0,0,0,.8);
+  }
+
+/* Horses */
+.horse:before {
+  position: absolute;
+  top: -25px;
+  left: -100px;
+  content: "n";
+  font-family: "Horse";
+  font-size: 100px;
+  z-index: 10;
+}
+
+.horse-1:before {
+  color: red;
+}
+
+.horse-2:before {
+  color: orange;
+}
+
+.horse-3:before {
+  color: yellow;
+}
+
+.horse-4:before {
+  color: blue;
+}
+
+.horse-5:before {
+  color: purple;
+}
+
+/* Go! */
+.go .horse:before {
+  left: 100%;
+}
