@@ -98,26 +98,34 @@ header {
   font-family: "Horse";
   font-size: 100px;
   z-index: 10;
+  transition: left 4s linear;
 }
 
 .horse-1:before {
   color: red;
+  transition-duration: 4.5s;
 }
 
 .horse-2:before {
   color: orange;
+  transition-timing-function: ease-in;
 }
 
 .horse-3:before {
   color: yellow;
+  transition-delay: .5s;
+  transition-duration: 4.5s;
 }
 
 .horse-4:before {
   color: blue;
+  transition-delay: .5s;
 }
 
 .horse-5:before {
   color: purple;
+  transition-duration: 4.2s;
+  transition-timing-function: ease-in-out;
 }
 
 /* Go! */
