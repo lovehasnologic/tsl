@@ -1,6 +1,7 @@
 /* Base */
 body {
   font-family: "Droid Serif", Georgia, "Times New Roman", serif;
+  -webkit-perspective: 1000px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -56,6 +57,10 @@ a:hover {
   background-image: linear-gradient(#e8a440, #9b6f2e);
 }
 
+.btn:active {
+  -webkit-transform: translateY(1px);
+}
+
 /* Header */
 header {
   font-family: "Droid Sans", Helvetica, Arial, sans-serif;
@@ -74,6 +79,12 @@ header {
   header .logo img {
     position: absolute;
     left: 0;
+    -webkit-transform: rotate(-15deg) translateY(-10px);
+    -webkit-transition: -webkit-transform .2s ease-out;
+  }
+
+  header .logo:hover img {
+    -webkit-transform: rotate(-25deg) translateY(-10px);
   }
 
   header nav {
@@ -110,6 +121,11 @@ header {
   .inventory img {
     max-width: 100%;
     margin-bottom: 10px;
+    -webkit-transition: -webkit-transform .2s ease-out;
+  }
+
+  .inventory li:hover img {
+    -webkit-transform: scale(1.1);
   }
 
 /* Footer */
@@ -118,3 +134,77 @@ footer {
   padding: 20px 0;
   margin-top: 40px;
 }
+
+/* Box */
+.box {
+  -webkit-perspective: 1000px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #644117;
+}
+  
+  .box h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .box ul {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: rotateX(45deg) rotateY(45deg);
+  }
+
+  .box li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 200px;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    background: black;   
+    opacity: .6;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .box li a {
+    display: block;
+  }
+
+  .box .front {
+    background: red;
+    -webkit-transform: translateZ(100px);
+  }
+
+  .box .back {
+    background: orange;
+    -webkit-transform: rotateY(180deg) translateZ(100px);
+  }
+
+  .box .left {
+    background: yellow;
+    -webkit-transform: rotateY(-90deg) translateZ(100px);
+  }
+
+  .box .right {
+    background: green;
+    -webkit-transform: rotateY(90deg) translateZ(100px);
+  }
+
+  .box .top {
+    background: blue;
+    -webkit-transform: rotateX(90deg) translateZ(100px);
+  }
+
+  .box .bottom {
+    background: purple;
+    -webkit-transform: rotateX(-90deg) translateZ(100px);
+  }
+
+
