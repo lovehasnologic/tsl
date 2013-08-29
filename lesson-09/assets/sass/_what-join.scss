@@ -1,0 +1,66 @@
+/* ------------------------------------------
+ * What and Join Sections
+ * ------------------------------------------ */
+
+.what,
+.join {
+  background: $blue;
+  text-align: center;
+  p {
+    color: $white;
+  }
+  .button-more {
+    color: $white;
+    border-color: $white;
+    &:hover {
+      background: scale-color($blue, $lightness: 75%); /* no-rgba fallback */
+      background: transparentize($white, 0.75); /* results in rgba color with .25 opacity */
+    }
+  }
+}
+
+.steps-three {
+  margin: 3em 0;
+  li {
+    @extend %float-left;
+    width: 32%;
+    margin-left: 2%;
+    text-align: left;
+    @media #{$baby-bear} {
+      float: none;
+      width: 100%;
+      margin-left: 0;
+      text-align: left;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  p {
+    overflow: hidden;
+  }
+}
+
+.step-icon {
+  @extend %float-left;
+  @include image-replace($step-icon-size,$step-icon-size,'../img/sprite.png',0 bottom);
+  margin-right: 2em;
+  @media #{$mama-bear} {
+    width: $step-icon-size/2;
+    padding-top: $step-icon-size/2;
+    margin-right: 1em;
+    background-size: 110px 48px;
+  }
+  .steps-three li:nth-child(2) & {
+    background-position: -70px bottom;
+    @media #{$mama-bear} {
+      background-position: -35px bottom;
+    }
+  }
+  .steps-three li:nth-child(3) & {
+    background-position: -140px bottom;
+    @media #{$mama-bear} {
+      background-position: -70px bottom;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+/* ------------------------------------------
+ * Utility Classes
+ * ------------------------------------------ */
+
+%float-right {
+  display: inline;
+  float: right;
+}
+
+%float-left {
+  display: inline;
+  float: left;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 95%;
+}
+
+.right {
+  @extend %float-right;
+}
+
+.left {
+  @extend %float-left;
+}

@@ -1,0 +1,74 @@
+/* ------------------------------------------
+ * Header
+ * ------------------------------------------ */
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: $header-bg;
+  @media #{$papa-bear} {
+    position: static;
+  }
+}
+
+.logo {
+  @extend %float-left;
+  @include image-replace(220px,35px,'../img/sprite.png');
+  margin: 1em;
+  vertical-align: middle;
+  @media #{$papa-bear} {
+    .logo {
+      display: block;
+      float: none;
+      margin: 1em auto;
+    }
+  }
+}
+
+nav {
+  @extend %float-right;
+  vertical-align: middle;
+  margin: 1em;
+  @media #{$papa-bear} {
+    display: none;
+    float: none;
+    margin: 1em 0;
+    text-align: center;
+  }
+  a {
+    padding: 0.3em 0.5em;
+    font-size: 1.6em;
+    display: inline-block;
+    vertical-align: middle;
+    color: $text-gray;
+    text-decoration: none;
+    @media #{$papa-bear} {
+      display: block;
+      clear: both;
+      margin: 0;
+      padding: 0.3em 0;
+      font-size: 1.75em;
+      border-top: 1px solid gray;
+    }
+    &:hover {
+      color: darken($text-gray, 25%);
+    }
+  }
+}
+
+.hamburger-icon {
+  display: none;
+  @media #{$papa-bear} {
+    display: block;
+    width: $hamburger-size;
+    height: $hamburger-size/5;
+    border-top: $hamburger-size/5*3 double $hamburger-color;
+    border-bottom: $hamburger-size/5 solid $hamburger-color;
+    text-indent: -9999px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}

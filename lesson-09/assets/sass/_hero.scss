@@ -1,0 +1,14 @@
+/* ------------------------------------------
+ * Hero
+ * ------------------------------------------ */
+
+.hero {
+  background: $black url(../img/hero-bg.jpg) 50% 50% no-repeat;
+  padding: 15em 0 10em;
+  text-align: center;
+  background-size: cover;
+  .inner {
+    width: 80%;
+  }
+}
+

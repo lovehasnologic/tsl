@@ -1,0 +1,30 @@
+$article-width: 65%;
+
+/* ------------------------------------------
+ * Experts & People Section
+ * ------------------------------------------ */
+
+.experts,
+.people {
+  article {
+    width: $article-width;
+  }
+  .button-more {
+    border-color: $blue;
+    color: $blue;
+    margin: 2em 0;
+    &:hover {
+      background: scale-color($blue, $lightness: 75%); /* no-rgba fallback */
+      background: transparentize($blue, 0.75); /* results in rgba color with .25 opacity */
+    }
+  }
+  img {
+    width: 100 - $article-width - 5;
+    height: auto !important; /* Responsive height */
+    @include border-radius(50%);
+  }
+}
+
+.people {
+  background: darken($body-bg, 5%);
+}

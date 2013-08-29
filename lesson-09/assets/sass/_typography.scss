@@ -1,0 +1,46 @@
+/* ------------------------------------------
+ * Typography
+ * ------------------------------------------ */
+
+h1, h2 {
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  color: $white;
+  font-size: 4.8em;
+}
+
+h2 {
+  color: $black;
+  font-size: 1.9em;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  border-bottom: 3px solid $text-gray;
+  .what &,
+  .join & {
+    color: $white;
+    border-bottom: 3px solid $white;
+  }
+}
+
+
+h5 {
+  color: $white;
+  font-size: 1.9em;
+  line-height: 1.4;
+  font-weight: 300;
+  margin-bottom: 1.5em;
+}
+
+p {
+  font-size: 1.6em;
+  margin: 0 0 1.5em;
+}
+
+.button-more {
+  @include button;
+}
