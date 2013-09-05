@@ -1,0 +1,76 @@
+/* ***** Variables ***** */
+
+$black: #000;
+$red: #c22;
+$white: #fafafa;
+
+$body-bg: $red;
+$article-bg: $white;
+
+$body-text-color: $black;
+
+$border-color: $black;
+
+$gutter-width: 30px;
+
+/* ***** Mixins ***** */
+
+@mixin border-radius($value: 5px) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  border-radius: $value;
+}
+
+@mixin box-shadow($value: 0 0 10px transparentize($black, 0.5)) {
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
+}
+
+/* ***** Extends ***** */
+
+%float-left {
+  float: left;
+  display: inline;
+}
+
+%border-default {
+  border-color: $border-color;
+  border-style: solid;
+}
+
+/* ***** Styles ***** */
+
+body {
+  background: $body-bg;
+  color: $body-text-color;
+}
+
+.article {
+  background: $article-bg;
+  @include border-radius($gutter-width/2);
+  @include box-shadow;
+  padding: $gutter-width;
+  margin: $gutter-width 0;
+  &:first-child {
+    margin-top: 0;
+  }
+  .no-boxshadow & {
+    border-width: 5px;
+    @extend %border-default;
+  }
+  i {
+    @include border-radius(50%);
+    @extend %border-default;
+    @extend %float-left;
+    border-width: 1px;
+  }
+  .meta {
+    @extend %float-left;
+    @extend %border-default;
+    border-top-width: 1px;
+  }
+}
+
+
+
