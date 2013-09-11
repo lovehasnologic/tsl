@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<title>Star Wars</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+	<div class="background" data-speed='10' data-type='parallax'></div>
+	<div class="midground" data-speed='5' data-type='parallax'></div>
+	<div class="foreground" data-speed='0.5' data-type='parallax'></div>
+
+	<div class="truth">
+		<h1>Star Wars</h1>
+    <small>...is better than...</small>
+		<h1>Star Trek</h1>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script>
+	  $(document).ready(function(){
+
+      // This sets a variable for the window so that it's easier to reference it
+      // through the various functions below.
+	    var $window = $(window);
+
+	    // Next we need to find all the items that have a data-type of parallax.
+	    // Once we find them we use the each method to loop through them with our function.
+	    // As we saw, this doesn't need to be an attribute selector. You can use a
+	    // comma separated list, or a class on the item, or anything that selects
+	    // what you're targeting.
+      $('[data-type="parallax"]').each(function(){
+
+        // Here we set a variable for the item we're looping through. Currently it's $(this),
+        // but as soon as we get in the scroll function below, $(this) becomes the window.
+        // By setting this variable, we can easily transport the item through nested functions.
+        var $bgItem = $(this);
+
+        // While we're at it, let's pull out the speed attribute and save it as a variable as well.
+        var scrollSpeed = $bgItem.data('speed');
+
+        // Now, we attach a function to scroll events on the window. Anytime the window scroll value
+        // changes the function will run.
+        $window.scroll(function(){
+
+          // First, we determine what vertical background position value we want to put on our parallax
+          // item. TO do that we divide the scrolled position (with the scrollTop() method) by our
+          // speed attribute we saved as a variable.
+          var yAxis = -($window.scrollTop() / scrollSpeed);
+
+          // Now that we have the new y position, we save a variable for the full background
+          // position property. It will end up being '50% ###px'. Note the space inside the quotes
+          // after the 50%, and no space between the variable and the px.
+          var newBgPos = '50% ' + yAxis + 'px';
+
+          // Finally, we do something to the dom. This line takes our original item we're looping
+          // through and adds a style sttribute with the background-position set to the variable we
+          // set above. NOTE: In jquery css methods we need to use camelCase, not hyphenated values.
+          $bgItem.css({ backgroundPosition: newBgPos });
+
+        });
+      });
+
+	  });
+	</script>
+
+</body>
+
+</html>
